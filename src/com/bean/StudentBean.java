@@ -6,6 +6,19 @@ public class StudentBean {
 	private String sName;
 	private String sEmail;
 	private String sPassword;
+	private String sGender;
+	private String sHobbies;
+	private String sCity;
+	
+	
+
+	public String getsCity() {
+		return sCity;
+	}
+
+	public void setsCity(String sCity) {
+		this.sCity = sCity;
+	}
 
 	public int getsId() {
 		return sId;
@@ -38,5 +51,22 @@ public class StudentBean {
 	public void setsPassword(String sPassword) {
 		this.sPassword = sPassword;
 	}
+
+	public String getsGender() {
+		return sGender;
+	}
+
+	public void setsGender(String sGender) {
+		this.sGender = sGender;
+	}
+
+	public String getsHobbies() {
+		return sHobbies;
+	}
+
+	public void setsHobbies(String sHobbies) {
+		this.sHobbies = sHobbies;
+	}
+	
 
 }

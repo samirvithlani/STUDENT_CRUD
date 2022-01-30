@@ -17,12 +17,15 @@ public class StudentDao {
 		Connection conn = DBConnection.getConnection();
 		if (conn != null) {
 
-			String INSERTSQL = "insert into student(sname,semail,spassword)values(?,?,?)";
+			String INSERTSQL = "insert into student(sname,semail,spassword,sgender,shobbies,scity)values(?,?,?,?,?,?)";
 			try {
 				PreparedStatement pstmt = conn.prepareStatement(INSERTSQL);
 				pstmt.setString(1, studentBean.getsName());
 				pstmt.setString(2, studentBean.getsEmail());
 				pstmt.setString(3, studentBean.getsPassword());
+				pstmt.setString(4, studentBean.getsGender());
+				pstmt.setString(5, studentBean.getsHobbies());
+				pstmt.setString(6, studentBean.getsCity());
 
 				int res = pstmt.executeUpdate();
 				if (res > 0) {
@@ -56,6 +59,9 @@ public class StudentDao {
 					studentBean.setsName(rs.getString("sname"));
 					studentBean.setsEmail(rs.getString("semail"));
 					studentBean.setsPassword(rs.getString("spassword"));
+					studentBean.setsCity(rs.getString("scity"));
+					studentBean.setsGender(rs.getString("sgender"));
+					studentBean.setsHobbies(rs.getString("shobbies"));
 					studentsList.add(studentBean);
 				}
 			} catch (SQLException e) {

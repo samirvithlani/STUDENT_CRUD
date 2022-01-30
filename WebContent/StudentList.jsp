@@ -19,6 +19,9 @@
 			<th>NAME</th>
 			<th>EMAIL</th>
 			<th>PASSWORD</th>
+			<th>CITY</th>
+			<th>GENDER</th>
+			<th>HOBBIES</th>
 		</tr>
 
 		<%
@@ -31,6 +34,9 @@
 			<td><%=studentBean.getsEmail()%></td>
 			<td><%=studentBean.getsEmail()%></td>
 			<td><%=studentBean.getsPassword()%></td>
+			<td><%=studentBean.getsCity()%></td>
+			<td><%=studentBean.getsGender()%></td>
+			<td><%=studentBean.getsHobbies()%></td>
 			<td><a
 				href="studentdeletecontroller?id=<%=studentBean.getsId()%>">DELETE</a></td>
 		</tr>
